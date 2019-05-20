@@ -1,6 +1,6 @@
 class Favourites 
 
     def all
-      ['Makers Academy', 'Google', 'Yahoo']
+      ['https://makers.tech', 'https://www.google.com', 'https://www.yahoo.com']
     end
   end
