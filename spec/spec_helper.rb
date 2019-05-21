@@ -23,7 +23,7 @@ require 'capybara/rspec'
 require 'rspec'
 
 # tell Capybara about our app class
-Capybara.app = Bookmark
+Capybara.app = Bookmark_Manager
 
 require 'capybara/rspec'
 require 'simplecov'
@@ -43,9 +43,6 @@ RSpec.configure do |config|
     puts "\e[33mTry it now! Just run: rubocop\e[0m"
   end
 end
-
-
-
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
