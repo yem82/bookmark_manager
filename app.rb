@@ -1,15 +1,13 @@
 require 'sinatra/base'
-
-class Bookmark_Manager < Sinatra::Base 
-    
+# BookmarkManager App
+class BookmarkManager < Sinatra::Base
   get '/' do
-    'Hello World!'
-     erb :index
-  end 
+    erb :index
+  end
 
   get '/bookmarks' do
-    erb :bookmarks 
-  end 
+    erb :bookmarks
+  end
 
-  run! if app_file == $0
-end 
+  run! if app_file == $PROGRAM_NAME
+end

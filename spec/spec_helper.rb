@@ -23,7 +23,7 @@ require 'capybara/rspec'
 require 'rspec'
 
 # tell Capybara about our app class
-Capybara.app = Bookmark_Manager
+Capybara.app = BookmarkManager
 
 require 'capybara/rspec'
 require 'simplecov'
