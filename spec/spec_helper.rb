@@ -12,7 +12,7 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 # require our sinatra app file
 
