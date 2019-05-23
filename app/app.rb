@@ -11,10 +11,6 @@ class BookmarkManager < Sinatra::Base
     erb :bookmarks
   end
 
-  # post '/bookmarks' do
-  #   "Hello World"
-  # end
-
   get '/bookmarks/new' do
     erb :"bookmarks/new"
   end
