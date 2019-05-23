@@ -3,12 +3,12 @@ require './lib/bookmark'
 # BookmarkManager App
 class BookmarkManager < Sinatra::Base
   get '/' do
-    erb :"bookmarks/index"
+    erb :index
   end
 
   get '/bookmarks' do
     @bookmarks = Bookmark.all
-    erb :"bookmarks/bookmarks"
+    erb :bookmarks
   end
 
   # post '/bookmarks' do
@@ -19,12 +19,10 @@ class BookmarkManager < Sinatra::Base
     erb :"bookmarks/new"
   end
 
-  post'/bookmarks/new' do
-    url = params['url']
-    connection = PG.connect(dbname: 'bookmark_manager_test')
-    connection.exec("INSERT INTO bookmarks (url) VALUES('#{url}')")
+  post'/bookmarks' do
+    Bookmark.create(params[:url])
     redirect '/bookmarks'
   end
 
-  run! if app_file == $PROGRAM_NAME
+  run! if app_file == $0
 end
