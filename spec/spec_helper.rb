@@ -12,20 +12,27 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-ENV['ENVIRONMENT'] = 'test'
 
-# require our sinatra app file
-
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
-
+require File.join(File.dirname(__FILE__), '..', './app.rb')
+require_relative './setup_test_database'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
+ENV['ENVIRONMENT'] = 'test'
+ENV['RACK_ENV'] = 'test'
+
+# require our sinatra app file
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+
 # tell Capybara about our app class
 Capybara.app = BookmarkManager
 
-require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
 

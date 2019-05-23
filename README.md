@@ -18,3 +18,8 @@ CREATE DATABASE bookmark_manager_test;
 
  To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
 
+User story 2
+
+As a user
+in order to revisit my new favourite sites
+I would like to save new bookmarks to the bookmark manager
