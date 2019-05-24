@@ -12,18 +12,12 @@
         1,
         null,
         null,
-        null,
-        null,
-        null,
         1,
         1,
         1,
         null,
         1,
         null,
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -35,6 +29,14 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         1,
         1,
         1,
@@ -61,6 +63,21 @@
         1,
         1,
         null,
+        null,
+        null
+      ],
+      "/Users/yems/Projects/bookmark_manager/spec/features/deleting_a_bookmark_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
         null,
         null
       ],
@@ -91,6 +108,6 @@
         null
       ]
     },
-    "timestamp": 1558699264
+    "timestamp": 1558707036
   }
 }
